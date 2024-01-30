@@ -4,6 +4,6 @@ let passport = {
 };
 
 let passport_copy = { ...passport };
-passport_copy["name"] = "Ivan";
-console.log(passport["name"]);
-console.log(passport_copy["name"]);
+passport_copy.name = "Ivan";
+console.log(passport.name);
+console.log(passport_copy.name );
