@@ -7,7 +7,7 @@ let passportWithAddress = {
     }
 };
 
-let passportWithAddress_copy = structuredClone(passportWithAddress);
-passportWithAddress_copy["address"]["city"] = "Bobryisk";
-console.log(passportWithAddress["address"]["city"]);
-console.log(passportWithAddress_copy["address"]["city"]);
+let passportWithAddress_copy = {...passportWithAddress, address: {...passportWithAddress.address}};
+passportWithAddress_copy.address.city = "Bobryisk";
+console.log(passportWithAddress.address.city);
+console.log(passportWithAddress_copy.address.city);
